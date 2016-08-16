@@ -30,11 +30,21 @@ class PrimeChecker:
 obj=PrimeChecker('34')
 print(obj.is_prime())
 '''  
-def string_length(*my_args)
-    print(args)
+def string_length(l):
+    if isinstance(l,list):
+        myList=[]
+        for item in l:
+            myList.append(len(item))
+        return myList
+            
+    elif isinstance(l,str):
+        return [len(l)]
+    else: return [0]
     
-string_length(['Adam', 'Frankel'])
-
+print(string_length('manuh'))
+    
+print(string_length(['Adam', 'Frankel']))
+print(string_length(['Michael', 'William', 'Smith']))
 
                 
 
