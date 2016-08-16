@@ -34,16 +34,17 @@ def fib1(n):
             i+=1
             num=l[i]
     
-print(fib1(50))
+#print(fib1(50))
 
-def fib(n):    # write Fibonacci series up to n
-     """Print a Fibonacci series up to n."""
-     a, b = 0, 1
-     while a < n:
-         print(a, end=' ')
+def fib(n): 
+    myList=[]
+    a, b = 0, 1
+    while a < n:
+        # print(a, end=' ')
+        myList.append(a)
         a, b = b, a+b
-    print()
+    return myList
     
-    fib(2000)
+print(fib(2000))
 
         
