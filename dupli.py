@@ -40,11 +40,21 @@ def fib(n):
     myList=[]
     a, b = 0, 1
     while a < n:
-        # print(a, end=' ')
         myList.append(a)
         a, b = b, a+b
     return myList
     
-print(fib(2000))
+#print(fib(2000))
 
-        
+def primeGenerator(k):
+    myList=[]
+    for n in range(2, k+1):
+        for x in range(2, n):
+            if n % x == 0:
+                break
+        else:
+            myList.append(n)
+
+    return myList
+print(primeGenerator(23))
+
