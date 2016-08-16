@@ -12,10 +12,11 @@ def find_missing(list1,list2):
     return list(setdiff)[0]
 
 '''
-class PrimeChecker:
+class PrimeChecker(object):
     
-    def __init__(self,number):
-        self.number=int(number)
+    def __init__(self,number=""):
+        
+        self.number=number
     def is_prime(self):
         for i in range(2,self.number+1):
             print('loop 1')
@@ -26,10 +27,10 @@ class PrimeChecker:
                     return False
             else:
                 return True
-'''           
-obj=PrimeChecker('34')
+          
+ob=PrimeChecker('34')
 print(obj.is_prime())
-'''  
+ 
 def string_length(l):
     if isinstance(l,list):
         myList=[]
@@ -41,10 +42,6 @@ def string_length(l):
         return [len(l)]
     else: return [0]
     
-print(string_length('manuh'))
-    
-print(string_length(['Adam', 'Frankel']))
-print(string_length(['Michael', 'William', 'Smith']))
 
                 
 
