@@ -14,38 +14,80 @@ def find_missing(list1,list2):
 '''
 class PrimeChecker(object):
     
-    def __init__(self,number=""):
-        
+    def __init__(self, number=''):
         self.number=number
     def is_prime(self):
-        for i in range(2,self.number+1):
-            print('loop 1')
-            for num in range(2,i):
-                print('loop 2')
-                if i % num==0:
-                    print(i,m)
-                    return False
-            else:
+        if not self.number:
+            return False
+        else:
+            self.number=int(self.number)
+            if self.number < 2:
+                return False
+            elif self.number==2 or self.number==3:
                 return True
-          
-ob=PrimeChecker('34')
-print(obj.is_prime())
- 
-def string_length(l):
-    if isinstance(l,list):
-        myList=[]
-        for item in l:
-            myList.append(len(item))
-        return myList
+            else:
+                for i in range(2,self.number//2):
+                    if self.number%i==0:
+                        return False
+                return True
             
-    elif isinstance(l,str):
-        return [len(l)]
-    else: return [0]
+
+class test(object):
+    pass
+#kata data type lap python
+def data_type(arg):
+    if isinstance(arg,str): 
+        return len(arg)
+    elif arg is None:
+        return 'no value'
+    elif isinstance(arg,bool): 
+        return arg 
+    elif isinstance(arg,int):
+        if arg<100:
+            return 'less than 100'
+        elif arg==100: 
+            return 'equal to 100'
+        else: 
+            return 'more than 100'
+    elif isinstance(arg,list):
+        if len(arg)>=3:
+            return arg[2]
+        return None
+#fizz buzz   
+def fizz_buzz(num):
+    if num%15==0:
+        return "FizzBuzz"
+    elif num%5==0:
+        return "Buzz"
+    elif num%3==0:
+        return "Fizz"
+    else:
+        return num
+
+    
+#reverse string
+def reverse_string(string):
+    if not string:
+        return None
+    reversed_string=string[::-1]
+    if reversed_string==string:
+        return True
+    return reversed_string
+
+
+#factorial lab
+def factorial(number):
+    product=1
+    for num in range(1,number+1):
+        product*=num
+    return product
+        
+    
+print(factorial(5))
+print(factorial(10))
+
+
     
 
-                
 
-            
- 
-        
-
+    
