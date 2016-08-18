@@ -81,10 +81,28 @@ def factorial(number):
     for num in range(1,number+1):
         product*=num
     return product
+def words(string):
+    myDict=dict()
+    ori_list=string.split()
+    myList=list(set(ori_list))
+    for word in myList:
+        key=word
+        if word.isdigit():
+            key=int(word)
+        myDict[key]=ori_list.count(word)
+        
+    return myDict
+print(words('words'))
+print(words("one fish two fish red fish blue fish"))
+print(words('car : carpet as java : javascript!!&@$%^&'))
+print(words('testing 1 2 testing'))
+
+            
+        
         
     
-print(factorial(5))
-print(factorial(10))
+    
+    
 
 
     
